@@ -1,0 +1,11 @@
+{
+    "name": "YoutubeDownloader",
+    "alias": "youtubedownloader",
+    "description": "",
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "Modules\\YoutubeDownloader\\app\\Providers\\YoutubeDownloaderServiceProvider"
+    ],
+    "files": []
+}

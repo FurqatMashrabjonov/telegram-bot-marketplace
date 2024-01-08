@@ -1,0 +1,31 @@
+{
+    "name": "nwidart/youtubedownloader",
+    "description": "",
+    "authors": [
+        {
+            "name": "Nicolas Widart",
+            "email": "n.widart@gmail.com"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [],
+            "aliases": {
+
+            }
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Modules\\YoutubeDownloader\\": "",
+            "Modules\\YoutubeDownloader\\App\\": "app/",
+            "Modules\\YoutubeDownloader\\Database\\Factories\\": "database/factories/",
+            "Modules\\YoutubeDownloader\\Database\\Seeders\\": "database/seeders/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Modules\\YoutubeDownloader\\Tests\\": "tests/"
+        }
+    }
+}
