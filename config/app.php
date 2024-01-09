@@ -162,7 +162,7 @@ return [
         /*
          * Package Service Providers...
          */
-
+        \App\Providers\TelegramAddonsProvider::class,
         /*
          * Application Service Providers...
          */

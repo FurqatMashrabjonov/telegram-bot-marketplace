@@ -1,5 +1,6 @@
 <?php
 
+use App\Telegram\Addons\ChannelSubscribeChecker\Facades\ChannelSubscribeFacade;
 use Illuminate\Support\Facades\Route;
 
 /*
