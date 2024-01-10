@@ -14,7 +14,7 @@ test('api tokens can be created', function () {
 
     Livewire::test(ApiTokenManager::class)
         ->set(['createApiTokenForm' => [
-            'name' => 'Test Token',
+            'name' => 'TestJob Token',
             'permissions' => [
                 'read',
                 'update',
@@ -24,7 +24,7 @@ test('api tokens can be created', function () {
 
     expect($user->fresh()->tokens)->toHaveCount(1);
     expect($user->fresh()->tokens->first())
-        ->name->toEqual('Test Token')
+        ->name->toEqual('TestJob Token')
         ->can('read')->toBeTrue()
         ->can('delete')->toBeFalse();
 })->skip(function () {

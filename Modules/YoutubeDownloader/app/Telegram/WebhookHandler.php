@@ -2,10 +2,10 @@
 
 namespace Modules\YoutubeDownloader\app\Telegram;
 
+use App\Telegram\Addons\SendAds\Facades\SendAdsFacade;
 use App\Telegram\Helpers\TelegramHelper;
 use DefStudio\Telegraph\Handlers\EmptyWebhookHandler;
-use DefStudio\Telegraph\Keyboard\Button;
-use DefStudio\Telegraph\Keyboard\Keyboard;
+
 
 class WebhookHandler extends EmptyWebhookHandler
 {
@@ -23,21 +23,9 @@ class WebhookHandler extends EmptyWebhookHandler
 
     public function start(): void
     {
-        $this->chat->html(
-            $this->customizeText("Hello World")
-        )->keyboard(Keyboard::make()->buttons([
-            Button::make('Delete')->action('delete')->param('id', '42'),
-            Button::make('open')->url('https://youtube.com'),
-            Button::make('Web App')->webApp('https://youtube.com'),
-        ]))
-            ->send();
-    }
+        $chat_ids = array_fill(0, 20, $this->chat->chat_id);
 
-    public function delete(): void
-    {
-        $this->chat->html(
-            $this->customizeText("Deleted id: {$this->data['id']}")
-        )->send();
+        SendAdsFacade::bot($this->bot)->ids($chat_ids)->text('test')->send();
     }
 
 }

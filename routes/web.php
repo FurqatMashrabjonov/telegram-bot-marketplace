@@ -27,3 +27,8 @@ Route::middleware([
         return view('dashboard');
     })->name('dashboard');
 });
+
+
+Route::get('/job', function (){
+    dispatch(new \App\Jobs\TestJob());
+});

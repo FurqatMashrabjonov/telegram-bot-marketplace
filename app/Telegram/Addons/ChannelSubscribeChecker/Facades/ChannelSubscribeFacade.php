@@ -12,6 +12,8 @@ class ChannelSubscribeFacade extends Facade
     /**
      * Get the registered name of the component.
      * @see App\Telegram\Addons\ChannelSubscribeChecker\ChannelSubscribe
+     * @see ChannelSubscribe::check()
+     * @see ChannelSubscribe::class
      * @return string
      */
     protected static function getFacadeAccessor(): string

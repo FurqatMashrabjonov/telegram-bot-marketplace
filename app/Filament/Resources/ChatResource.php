@@ -31,7 +31,7 @@ class ChatResource extends Resource
     {
         return $table
             ->columns([
-                Tables\Columns\TextColumn::make('chat_id')->label('Chat ID')->sortable()->searchable(),
+                Tables\Columns\TextColumn::make('chat_id')->label('Chat ID')->sortable()->searchable()->copyable(),
                 Tables\Columns\TextColumn::make('bot.name')->label('Bot name'),
             ])
             ->filters([

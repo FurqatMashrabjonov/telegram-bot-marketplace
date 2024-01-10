@@ -14,7 +14,7 @@ test('api tokens can be deleted', function () {
     }
 
     $token = $user->tokens()->create([
-        'name' => 'Test Token',
+        'name' => 'TestJob Token',
         'token' => Str::random(40),
         'abilities' => ['create', 'read'],
     ]);
